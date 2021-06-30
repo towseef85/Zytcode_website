@@ -1,0 +1,10 @@
+1. Project-single page: Done
+2. Changing the content in all the pages like headings and other changes: Done
+3. Button colors to follow match all the themes
+4. About us page (Need to add team column) : Done
+5. Strapi customization
+6. Working on context api
+7. Integration with api
+8. Changing the navbar for layout 2
+9. Adding footer content
+10.Images

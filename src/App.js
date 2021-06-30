@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useEffect } from 'react';
+import {BrowserRouter as Router, Switch} from 'react-router-dom'
 
-function App() {
+import CustomNavbar from './components/CustomNavbar';
+import Layout1 from './core/Layout1';
+import Home from './pages/Home';
+import ScrollToTopRoute from './ScrollToTopRoute';
+
+function App(props) {
+  useEffect(() => {
+    props.hideLoader();
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+      <ScrollToTopRoute exact={true} to={"/"} component={Home} layout1={true}/>
+   </Switch>
+   </Router>
   );
 }
 
