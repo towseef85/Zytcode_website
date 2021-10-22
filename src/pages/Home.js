@@ -21,10 +21,11 @@ function Home() {
         <Work/>
         <Clients/>
         <Subscribe/>
-        <Testimonials tClass="testimonial_area_four sec_pad"/>
         <Services/>
         <Projects/>
         <CaseStudies/>
+        <Testimonials tClass="testimonial_area_four sec_pad"/>
+       
         <GetInTouch/>
         </Fragment>
     )

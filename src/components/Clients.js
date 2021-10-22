@@ -1,104 +1,127 @@
 import React,{Fragment} from 'react'
-import Fade from 'react-reveal/Fade';
+
 
 const posts=[
     {
         "id": 1,
-        "image": "01.png",
+        "image": "c1.jpg",
     },
     {
         "id": 2,
-        "image": "02.png",
+        "image": "c2.jpg",
     },
     {
         "id": 3,
-        "image": "03.png",
+        "image": "c3.jpg",
     },
     {
         "id": 4,
-        "image": "04.png",
+        "image": "c4.jpg",
     },
     {
         "id": 5,
-        "image": "05.png",
+        "image": "c5.jpg",
     },
     {
         "id": 6,
-        "image": "06.png",
+        "image": "c6.jpg",
     },
     {
         "id": 7,
-        "image": "07.png",
+        "image": "c7.jpg",
     },
     {
         "id": 8,
-        "image": "08.png",
+        "image": "c8.jpg",
     },
     {
         "id": 9,
-        "image": "09.png",
+        "image": "c9.jpg",
     },
     {
         "id": 10,
-        "image": "02.png",
+        "image": "c10.jpg",
     },
     {
         "id": 11,
-        "image": "10.png",
+        "image": "c20.png",
     },
     {
         "id": 12,
-        "image": "11.png",
+        "image": "c11.jpg",
     },
     {
         "id": 13,
-        "image": "12.png",
+        "image": "c12.jpg",
     },
     {
         "id": 14,
-        "image": "13.png",
+        "image": "c13.jpg",
     },
     {
         "id": 15,
-        "image": "14.png",
+        "image": "c14.jpg",
     },
     {
         "id": 16,
-        "image": "15.png",
+        "image": "c15.jpg",
     },
     {
         "id": 17,
-        "image": "16.png",
+        "image": "c16.jpg",
     },
     {
         "id": 18,
-        "image": "17.png",
+        "image": "c17.jpg",
     },
     {
         "id": 19,
-        "image": "18.png",
+        "image": "c18.jpg",
+    },
+    {
+        "id": 21,
+        "image": "c21.jpg",
     },
     {
         "id": 20,
-        "image": "19.png",
+        "image": "c22.jpg",
+    },
+    {
+        "id": 21,
+        "image": "c23.png",
+    },
+    {
+        "id": 19,
+        "image": "c24.jpg",
+    },
+    {
+        "id": 19,
+        "image": "c25.jpg",
     }
 ]
 
 function Clients() {
     return (
-        <section className="erp_customer_logo_area mb-4">
+        <section className="security_customers_logo_area">
         <div className="container">
-            <div className="hosting_title erp_title text-center">
-                <h2>Great companies that <span className="icon_heart"></span> ZYTCode Services</h2>
-                <p>Who we worked for & who trust on us.</p>
+            <div className="hosting_title analytices_title text-center">
+            <h2 className="wow fadeInUp"><span>Our Clients. </span>Our powerful clients ecosystem</h2>
+                    <p className="wow fadeInUp" data-wow-delay="0.3s">We embrace the power of change to create long-lasting value 
+                    in every direction for our clients.</p>
             </div>
-            <Fade bottom cascade>
-                <div className="animation_inner">
+        
+            <div className="security_inner">
+            <img className="p_absoulte security_leaf_left wow fadeInDown" data-wow-delay="0.8s" src={require("../img/home-security/leaf_clients2.png")} alt=""/>
+                    <img className="p_absoulte security_leaf_right wow fadeInDown" data-wow-delay="0.8s" src={require("../img/home-security/leaf_clients1.png")} alt=""/>
+                            <div className="row">
                         {posts.map(post =>(
-                            <div key={post.id}><div className="item"><img src={require ("../img/erp-home/img/" + post.image)} alt=""/></div></div>
+                            <div className="col-lg-2 col-sm-4 col-6" key={post.id}>
+                                <a href="" className="analytices_logo wow fadeInUp"><img style={{width:'100%'}} src={require ("../img/clients/" + post.image)} alt=""/></a>
+                                </div>
                         ))}
                 </div>
-            </Fade>
+                </div>
+            
             <div className="text-center">
                 <a href="/#" className="er_btn">More Customers</a>
             </div>

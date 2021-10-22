@@ -3,9 +3,9 @@ import Slider from 'react-slick';
 import Sectitle from './Title/Sectitle'
 
 const Service= {
-    agtext1: 'Why I say old chap that is spiffing bodge, blag pardon.',
-    agtext2: 'Why I say old chap that is spiffing bodge, blag pardon.',
-    agtext3: 'Starkers dropped a clanger lurgy is cack excuse my French what.',
+    agtext1: 'Coming together in Crisis',
+    agtext2: 'Future of mobility and security',
+    agtext3: 'Digital transformation in Legal roadmap.',
 }
 
 function CaseStudies() {
@@ -26,8 +26,8 @@ function CaseStudies() {
     
         <div className="col-lg-6 about_content_left">
             <div className="about_content mb_30">
-                <h2 className="f_size_30 f_700 l_height45 mb_20">Case Studies & stories</h2>
-                <p className="f_size_15 f_400 mb_40">Maximize the value of Cloud and IT infrastructure with solutions that integrate deep industry insights, leading technologies and best-in-class execution</p>
+                <h2 className="f_size_30 f_700 l_height45 mb_20">Case Studies & Stories</h2>
+                <p className="f_size_15 f_400 mb_40">We work together across the globe to make a world of difference</p>
             </div>
         </div>
         <div className="col-lg-6 about_img">

@@ -16,7 +16,7 @@ function Subscribe() {
                     <input type="number" name="mobile" id="mobile" placeholder="Mobile" className="form-control"/>
                 </div>
                 <div className="input-group col-lg-2 col-md-3 col-sm-12">
-                    <input type="submit" name="submit" value="Lets start" className="check-btn"/>
+                    <input type="submit" name="submit" value="Lets Connect" className="check-btn"/>
                 </div>
             </form>
         </div>

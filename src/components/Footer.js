@@ -1,34 +1,69 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
+import Reveal from 'react-reveal/Reveal'
 
-function Footer({fClass}) {
+function Footer() {
     return (
-        <footer className={`footer_area footer_area_four f_bg ${fClass}`}>
-                <div className="footer_top">
+        <footer className="new_footer_area bg_color">
+        <div className="new_footer_top">
+            <div className="container">
+                <div className="row">
+                <Reveal effect="fadeInLeft" duration={500} key={1}>
+                                            <div className="col-lg-3 col-md-6" >
+                                                <div className="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                                                    <h3 className="f-title f_600 t_color f_size_18">Why ZYTCode</h3>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p>
+                                                    <form action="#" className="f_subscribe_two mailchimp" method="post">
+                                                        <input type="text" name="EMAIL" className="form-control memail" placeholder="Email"/>
+                                                        <button className="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                                        <p className="mchimp-errmessage" style={{display: "none"}}></p>
+                                                        <p className="mchimp-sucmessage" style={{display: "none"}}></p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                </Reveal>
+                <Reveal effect="fadeInLeft" duration={500} >
+                                        <div className="col-lg-3 col-md-6">
+                                            <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                                                <h3 className="f-title f_600 t_color f_size_18">Usefull Links</h3>
+                                                <ul className="list-unstyled f_list">
+                                                    <li>About Us</li>
+                                                    <li>Contact Us</li>
+                                                    <li>Services</li>
+                                                    <li>Projects</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                </Reveal>
+                <Reveal effect="fadeInLeft" duration={500} >
+                <div className="col-lg-3 col-md-6">
+                                            <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                                                <h3 className="f-title f_600 t_color f_size_18">Usefull Links</h3>
+                                                <ul className="list-unstyled f_list">
+                                                    <li>About Us</li>
+                                                    <li>Contact Us</li>
+                                                    <li>Services</li>
+                                                    <li>Projects</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                </Reveal>
+            </div>
+            </div>
+            <div className="footer_bg">
+                        <div className="footer_bg_one"></div>
+                        <div className="footer_bg_two"></div>
+             </div>
+            </div>
+            <div className="footer_bottom">
                     <div className="container">
-                        <div className="row">
-                            
-                         
-                        </div>
-                    </div>
-                </div>
-                <div className="footer_bottom">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-5 col-sm-6">
-                                <p className="mb-0 f_400">Copywrite</p>
+                        <div className="row align-items-center">
+                            <div className="col-lg-6 col-sm-7">
+                                <p className="mb-0 f_400">ALL RIGHTS RECEIVED</p>
                             </div>
-                            <div className="col-lg-4 col-md-3 col-sm-6">
-                                <div className="f_social_icon_two text-center">
-                                    
-                                </div>
+                            <div className="col-lg-6 col-sm-5 text-right">
+                                <p>Made with <i className="icon_heart"></i> in <a href="/#">DroitThemes</a></p>
                             </div>
-                            <div className="col-lg-4 col-md-4 col-sm-12">
-                                <ul className="list-unstyled f_menu text-right">
-                                    <li><a href=".#">Terms of Use</a></li>
-                                    <li><a href=".#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        
                         </div>
                     </div>
                 </div>

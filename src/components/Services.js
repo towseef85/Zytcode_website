@@ -7,12 +7,12 @@ function Services() {
     const integrationItem =[
         {
             "id": 100,
-            "iImage": "kissmetrics.png",
+            "iImage": "web.png",
             "text": "Web Development"
         },
         {
             "id": 101,
-            "iImage": "metorik.png",
+            "iImage": "mobile.png",
             "text": "Mobile Apps"
         },
         {
