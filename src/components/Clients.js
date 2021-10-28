@@ -111,8 +111,8 @@ function Clients() {
             </div>
         
             <div className="security_inner">
-            <img className="p_absoulte security_leaf_left wow fadeInDown" data-wow-delay="0.8s" src={require("../img/home-security/leaf_clients2.png")} alt=""/>
-                    <img className="p_absoulte security_leaf_right wow fadeInDown" data-wow-delay="0.8s" src={require("../img/home-security/leaf_clients1.png")} alt=""/>
+            <img className="p_absoulte security_leaf_left wow fadeInDown" data-wow-delay="0.8s" src={require("../img/new-home/leaf_clients2.png")} alt=""/>
+                    <img className="p_absoulte security_leaf_right wow fadeInDown" data-wow-delay="0.8s" src={require("../img/new-home/leaf_clients1.png")} alt=""/>
                             <div className="row">
                         {posts.map(post =>(
                             <div className="col-lg-2 col-sm-4 col-6" key={post.id}>

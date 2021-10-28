@@ -78,7 +78,7 @@ function HRService() {
                                             <div className={`p_service_item agency_service_item pr_70 wow fadeInUp`}>
                                                     <div className="icon">
                                                         
-                                                        <img src={require (`../img/home4/icon_shape${item.id > 4 ? item.id-2 : item.id}.png`)} alt=""/>
+                                                        <img src={require (`../img/new-home/icon_shape${item.id > 4 ? item.id-2 : item.id}.png`)} alt=""/>
                                                         <i className={item.icon}></i>
                                                     </div>
                                                     <h5 className="f_600 f_p t_color3">{item.title}</h5>

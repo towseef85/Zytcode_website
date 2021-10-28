@@ -8,7 +8,7 @@ import CoreFeatures from '../components/CoreFeatures'
 function Services() {
     return (
         <Fragment>
-            <Breadcrums breadcrumbClass="breadcrumb_area" imgName="breadcrumb/banner_bg.png" Ptitle="Our services" Pdescription="An integrated offering for enterprises to scale and future-proof digital transformation"/>
+            <Breadcrums breadcrumbClass="breadcrumb_area" imgName="Img-05.jpg" Ptitle="Our services" Pdescription="An integrated offering for enterprises to scale and future-proof digital transformation"/>
             <CoreFeatures/>
             <HRService/>
             <Clients/>

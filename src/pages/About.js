@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
 import Breadcrums from "../components/Breadcrums";
-import Reveal from "react-reveal/Reveal";
 import Clients from "../components/Clients";
 import Subscribe from "../components/Subscribe";
-import Team from "../components/Team";
+
 
 function About() {
   return (

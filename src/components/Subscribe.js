@@ -5,7 +5,7 @@ function Subscribe() {
     return (
         <section className="seo_subscribe_area">
         <div className="overlay_img"></div>
-        <div className="cloud_img"><img src={require('../img/seo/cloud.png')} alt=""/></div>
+        <div className="cloud_img"><img src={require('../img/new-home/cloud.png')} alt=""/></div>
         <div className="container">
             <SeoTitle Title="Let's help you navigate your next" TitleP="Please provide the following information about your business needs to help us serve you better."/>
             <form action="#" className="row seo_subscribe_form">

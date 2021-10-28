@@ -1,5 +1,4 @@
 import React from 'react'
-import ProjectGridItem from '../components/ProjectGridItem'
 import ProjectRightSidebar from './ProjectRightSidebar'
 import {PROJECTS} from '../data/projects'
 import { Link } from 'react-router-dom'

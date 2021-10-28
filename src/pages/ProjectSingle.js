@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import Featuresitems from "../components/Featuresitems";
 import Breadcrums from "../components/Breadcrums";
 import { PROJECTS } from "../data/projects";
 import { useParams } from "react-router-dom";

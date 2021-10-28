@@ -11,7 +11,7 @@ function Projects() {
                         <div className="bubble b_three"></div>
                         <div className="bubble b_four"></div>
                         <div className="bubble b_six"></div>
-                        <div className="triangle b_eight" data-parallax='{"x": 120, "y": -10}'><img src="../img/seo/triangle_one.png" alt=""/></div>
+                        <div className="triangle b_eight" data-parallax='{"x": 120, "y": -10}'><img src="../img/new-home/triangle_one.png" alt=""/></div>
                     </div>
                     <div className="container">
                         <SeoTitle Title="Our Projects" TitleP="Acting today, building for tomorrow"/>

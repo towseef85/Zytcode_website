@@ -1,11 +1,9 @@
 import React,{Fragment} from "react";
 import Reveal from "react-reveal/";
-import Snow from "./snow";
 import { Link } from "react-router-dom";
 function Banner() {
   return (
     <Fragment>
-    <Snow/>
     <section className="startup_banner_area_three" id="home">
       
       <div className="container">

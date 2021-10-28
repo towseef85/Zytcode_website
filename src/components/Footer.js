@@ -14,7 +14,7 @@ function Footer() {
                                             <div className="col-lg-3 col-md-6" >
                                                 <div className="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
                                                     <h3 className="f-title f_600 t_color f_size_18">Why ZYTCode</h3>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p>
+                                                    <p>ZYTCode Creates the most structured, efficient software solutions to elevate a wide range of Businesses </p>
                                                     <form action="#" className="f_subscribe_two mailchimp" method="post">
                                                         <input type="text" name="EMAIL" className="form-control memail" placeholder="Email"/>
                                                         <button className="btn btn_get btn_get_two" type="submit">Subscribe</button>

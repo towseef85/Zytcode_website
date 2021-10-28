@@ -5,28 +5,28 @@ import Fade from 'react-reveal/Fade';
 const  TestimonialText= [
     {
       id: 1,
-      image: "new/member_01.jpg",
+      image: "new-home/member_01.jpg",
       description: "He nicked it hanky panky Eaton naff it's your round quaint cheeky cheers, tomfoolery bonnet posh blimey what a plonker vagabond, zonked Elizabeth give us a bell.?",
       authorName: "Phillip Anthropy",
       authorPost: "UI/UX designer", 
     },
     {
       id: 2,
-      image: "new/member_01.jpg",
+      image: "new-home/member_01.jpg",
       description: "He nicked it hanky panky Eaton naff it's your round quaint cheeky cheers, tomfoolery bonnet posh blimey what a plonker vagabond, zonked Elizabeth give us a bell.?",
       authorName: "Phillip Anthropy",
       authorPost: "UI/UX designer", 
     },
     {
       id: 3,
-      image: "new/member_01.jpg",
+      image: "new-home/member_01.jpg",
       description: "He nicked it hanky panky Eaton naff it's your round quaint cheeky cheers, tomfoolery bonnet posh blimey what a plonker vagabond, zonked Elizabeth give us a bell.?",
       authorName: "Phillip Anthropy",
       authorPost: "UI/UX designer", 
     },
     {
       id: 4,
-      image: "new/member_01.jpg",
+      image: "new-home/member_01.jpg",
       description: "He nicked it hanky panky Eaton naff it's your round quaint cheeky cheers, tomfoolery bonnet posh blimey what a plonker vagabond, zonked Elizabeth give us a bell.?",
       authorName: "Phillip Anthropy",
       authorPost: "UI/UX designer", 
