@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function GetInTouch() {
     return (
-        <section className="action_area_three sec_pad">
+        <section className="action_area_three sec_pad" id="contact">
         <div className="curved"></div>
         <div className="container">
             <div className="row">

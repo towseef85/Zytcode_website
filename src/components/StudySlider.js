@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick/';
 import { Link } from 'react-router-dom';
+import { PROJECTS } from '../data/projects';
 
 function StudySlider() {
     const settings = {
@@ -39,54 +40,23 @@ function StudySlider() {
     return (
         
             <Slider {...settings} className="case_studies_slider">
+                {PROJECTS.map(project =>(
                     <div className="iitem">
-                        <div className="studies_item">
-                            <img src={require('../img/seo/studies_img_one.jpg')} alt=""/>
-                            <div className="text">
-                                <Link to='/projectSingle'>
-                                    <h4>Brainy Mentor</h4>
-                                </Link>
-                                <p>Eductaion</p>
-                            </div>
+                    <div className="studies_item">
+                        <img src={require('../img/new-home/project/'+project.img_banner)} alt=""/>
+                        <div className="text">
+                            <Link to={`/projectSingle/${project.id}`}>
+                                <h4>{project.title}</h4>
+                            </Link>
+                            <p>{project.category}</p>
                         </div>
                     </div>
-                    <div className="iitem">
-                        <div className="studies_item">
-                            <img src={require('../img/seo/studies_img_two.jpg')} alt=""/>
-                            <div className="text">
-                            <Link to='/projectSingle'>
-                                    <h4>Al Muehi</h4>
-                                </Link>
-                                <p>Legal Service</p>
-                              
-                            </div>
-                        </div>
-                    </div>
-                    <div className="iitem">
-                        <div className="studies_item">
-                            <img src={require('../img/seo/studies_img_three.jpg')} alt=""/>
-                            <div className="text">
-                            <Link to='/projectSingle'>
-                                    <h4>Ai Security</h4>
-                                </Link>
-                                <p>ML & AI</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="iitem">
-                        <div className="studies_item">
-                            <img src={require('../img/seo/studies_img_three.jpg')} alt=""/>
-                            <div className="text">
-                            <Link to='/projectSingle'>
-                                    <h4>Ecommerce</h4>
-                                </Link>
-                                <p>Online Shopping</p>
-                                
-                            </div>
-                          
-                        </div>
-                    </div>
+                </div>
+                ))}
+                 
+                    
+                   
+                   
                 </Slider> 
         
     )

@@ -47,7 +47,7 @@ function CustomNavbar({mClass, nClass, cClass, slogo, hbtnClass}) {
                             <Link className="nav-link" activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={1000}>Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" activeClass="active" to="team" spy={true} smooth={true} offset={-90} duration={1000}>Contact Us</Link>
+                            <Link className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-90} duration={1000}>Contact Us</Link>
                         </li>
                     </ul>
                     {/* <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">Get Started</a> */}

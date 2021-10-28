@@ -24,7 +24,7 @@ function MainFeatures() {
              </div>
              <div className="col-lg-6">
                 <div className="software_featured_img wow fadeInLeft" data-wow-delay="0.2s">
-                    <img className="img-fluid" src={require("../img/home4/work2.png")} alt=""/>
+                    <img className="img-fluid" src={require("../img/new-home/work2.png")} alt=""/>
                 </div>
             </div>
         </div>

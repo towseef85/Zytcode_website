@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Reveal from 'react-reveal/Reveal'
+import { SERVICES } from '../data/services';
+import {PROJECTS} from '../data/projects'
 
 function Footer() {
     return (
@@ -25,12 +27,13 @@ function Footer() {
                 <Reveal effect="fadeInLeft" duration={500} >
                                         <div className="col-lg-3 col-md-6">
                                             <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
-                                                <h3 className="f-title f_600 t_color f_size_18">Usefull Links</h3>
+                                                <h3 className="f-title f_600 t_color f_size_18">Services</h3>
                                                 <ul className="list-unstyled f_list">
-                                                    <li>About Us</li>
-                                                    <li>Contact Us</li>
-                                                    <li>Services</li>
-                                                    <li>Projects</li>
+                                                    {SERVICES.map(service =>(
+
+                                                    <li><Link to={`/serviceSingle/${service.id}`}> {service.title}
+                                                        </Link></li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                         </div>
@@ -38,12 +41,29 @@ function Footer() {
                 <Reveal effect="fadeInLeft" duration={500} >
                 <div className="col-lg-3 col-md-6">
                                             <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
-                                                <h3 className="f-title f_600 t_color f_size_18">Usefull Links</h3>
+                                                <h3 className="f-title f_600 t_color f_size_18">Projects</h3>
                                                 <ul className="list-unstyled f_list">
-                                                    <li>About Us</li>
-                                                    <li>Contact Us</li>
-                                                    <li>Services</li>
-                                                    <li>Projects</li>
+                                                    {PROJECTS.map(project => (
+                                                        
+                                                            <li>
+                                                            <Link to={`/projectsingle/${project.id}`}>
+                                                            {project.title}
+                                                            </Link>
+                                                            </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                </Reveal>
+                <Reveal effect="fadeInLeft" duration={500} >
+                <div className="col-lg-3 col-md-6">
+                                            <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                                                <h3 className="f-title f_600 t_color f_size_18">Useful Links</h3>
+                                                <ul className="list-unstyled f_list">
+                                                    <li><Link to="/aboutus">About Us</Link></li>
+                                                    <li><Link to="/contact">Contact Us</Link></li>
+                                                    <li><Link to="/services">Services</Link></li>
+                                                    <li><Link to="/projects">Projects</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -62,7 +82,7 @@ function Footer() {
                                 <p className="mb-0 f_400">ALL RIGHTS RECEIVED</p>
                             </div>
                             <div className="col-lg-6 col-sm-5 text-right">
-                                <p>Made with <i className="icon_heart"></i> in <a href="/#">DroitThemes</a></p>
+                                <p>Made with <i className="icon_heart"></i> in <a href="/#">ZYTCODE Solutions</a></p>
                             </div>
                         </div>
                     </div>

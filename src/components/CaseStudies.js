@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick';
-import Sectitle from './Title/Sectitle'
+import { Link } from 'react-router-dom';
 
 const Service= {
     agtext1: 'Coming together in Crisis',
@@ -31,7 +31,7 @@ function CaseStudies() {
             </div>
         </div>
         <div className="col-lg-6 about_img">
-            <a href=".#" className="pluse_icon"><i className="ti-plus"></i></a>
+            <Link to="/casestudy" className="pluse_icon"><i className="ti-plus"></i></Link>
             <Slider className="about_img_slider" {...settings}>
                 <div className="item">
                     <div className="about_item w45">

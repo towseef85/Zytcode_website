@@ -1,64 +1,119 @@
-import React, { Fragment, useEffect } from 'react'
-import Breadcrums from '../components/Breadcrums'
-import { useParams } from 'react-router-dom'
-import { SERVICES } from '../data/services'
+import React, { Fragment, useEffect } from "react";
+import Breadcrums from "../components/Breadcrums";
+import { useParams } from "react-router-dom";
+import { SERVICES } from "../data/services";
+import Sectitle from "../components/Title/Sectitle";
+import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 function serviceSingle() {
-    const { id } = useParams()
-    let serviceDetails;
-    useEffect(() => {
-        serviceDetails = SERVICES.find(service => id == id)
-        console.log("Service details", serviceDetails)
-    }, [id])
-    return (
-
-        <Fragment>
-
-            <Breadcrums breadcrumbClass="breadcrumb_area" imgName="breadcrumb/banner_bg.png" Ptitle="Services" Pdescription="Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.!!" />
-            <section className="service_details_area sec_pad">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5 pr_70">
-                            <div className="job_info">
-                                <div className="info_head">
-                                    <i className="ti-receipt"></i>
-                                    <h6 className="f_p f_600 f_size_18 t_color3">Unique Elements</h6>
-                                </div>
-                                <div className="info_item">
-                                    <h6>Owner:</h6>
-                                    <p>Droit Theme</p>
-                                </div>
-                                <div className="info_item">
-                                    <h6>Live Time:</h6>
-                                    <p>2 Working Days</p>
-                                </div>
-                                <div className="info_item">
-                                    <h6>Service Cost:</h6>
-                                    <p>$250.00</p>
-                                </div>
-                                <div className="info_item">
-                                    <h6>Quality:</h6>
-                                    <p>High</p>
-                                </div>
-                                <div className="info_item">
-                                    <h6>Experience</h6>
-                                    <p>3 Years</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-7">
-                            <div className="details_content">
-                                <div className="sec_title">
-                                    <p className="f_400 f_size_15">He lost his bottle a load of old tosh cup of tea brolly bog-standard matie boy blow off the little rotter morish, haggle hotpot skive off cuppa don't get shirty with me off his nut the full monty. Starkers morish down the pub such a fibber quaint gosh Harry boot owt to do with me the little rotter, baking cakes Eaton ummm I'm telling pardon me the bee's knees vagabond Oxford chap, A bit of how's your father bog-standard hanky panky daft well lavatory bubble and squeak the full monty. That say nice one grub cup of tea so I said barmy only a quid, I it's your round gutted mate cup of char golly gosh dropped a clanger my good sir, James Bond happy days brilliant blimey I is. Boot Jeffrey cockup the BBC pardon me victoria sponge Why chip shop what a load of rubbish pukka brolly cuppa tickety-boo bog-standard cheesed off posh, bugger Eaton William smashing knackered bog bonnet bobby bender cobblers only a quid baking cakes the full monty pardon you. </p>
-                                    <p className="f_400 f_size_15">Twit bonnet Jeffrey hunky-dory gormless chancer bog-standard spiffing good time, young delinquent Charles don't get shirty with me the BBC is brown bread off his nut a load of old tosh, chap grub bog skive off pardon me bleeder. Lavatory on your bike mate happy days the little rotter arse over tit no biggie at public school wind up car boot bamboozled well barmy bleeder the wireless bugger, cockup blatant David it's all gone to pot morish mush sloshed boot A bit of how's your father skive off cheers a load of old tosh. No biggie mush I don't want no agro it's your round cack boot say, the full monty mufty such a fibber up the duff Why, Eaton pardon me spiffing blower brown bread.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  const { id } = useParams();
+  const serviceDetails = SERVICES.find((service) => service.id == id);
+  console.log("Service details", serviceDetails);
+  return (
+    <Fragment>
+      <Breadcrums
+        breadcrumbClass="breadcrumb_area"
+        imgName="breadcrumb/banner_bg.png"
+        Ptitle={serviceDetails.title}
+        Pdescription={serviceDetails.slug}
+      />
+      <section className="service_details_area sec_pad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7">
+              <h3 className="mb-2 d-block ml-5" style={{ color: "#034ea2" }}>
+                {serviceDetails.subtitle}
+              </h3>
+              <div className="details_content">
+                <div className="sec_title">
+                  <p className="f_400 f_size_15">
+                    {serviceDetails.description}
+                  </p>
                 </div>
-            </section>
-        </Fragment>
-    )
+              </div>
+            </div>
+            <div className="col-lg-5 pr_70">
+              <img
+                style={{ width: "100%" }}
+                className="pt-5"
+                src={require("../img/new-home/" + serviceDetails.img_banner)}
+              />
+            </div>
+          </div>
+          <section className="app_service_area">
+            <div className="container">
+              <Sectitle
+                sClass="sec_title text-center mb_70"
+                Title="Enterprise-Class Development Solutions"
+                tClass="t_color3"
+                TitleP="Covering every aspect of the entire enterprise application development process"
+              />
+              <div className="row app_service_info">
+                {serviceDetails.types.map((type) => (
+                  <div className="col-lg-4" key={type.id}>
+                    <div
+                      className="app_service_item wow fadeInUp"
+                      data-wow-delay="0.2s"
+                    >
+                      <i className={`app_icon one ${type.icon}`}></i>
+                      <h5 className="f_p f_size_18 f_600 t_color3 mt_40 mb-30">
+                        {type.title}
+                      </h5>
+                      <p className="f_400 f_size_15 mb-30">
+                        {type.description}
+                      </p>
+                      <Link to="/contact" className="learn_btn_two">
+                        Connect to know more <i className="ti-arrow-right"></i>
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="seo_partner_logo_area sec_pad">
+            <div className="container">
+              <div className="seo_sec_title text-center mb_70">
+                <Fade bottom>
+                  <h2>{serviceDetails.technology_Heading}</h2>
+                  <p>{serviceDetails.technology_description}</p>
+                </Fade>
+              </div>
+              <div className="partner_logo_area_four">
+                <div className="row ">
+                  {serviceDetails.technology_languages.map((i) => (
+                    <div className="col-lg-2" key={i.id}>
+                      <img
+                        style={{ width: "100%", padding: "10px" }}
+                        src={require("../img/new-home/technology/" + i.img)}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section className="chat_get_started_area">
+        <div className="container">
+          <div className="chat_get_started_content text-center">
+            <h2 className="wow fadeInUp" data-wow-delay="0.2s">
+              CONTACT US TODAY. LET'S WORK TOGETHER
+            </h2>
+            <p>
+              Not only do we adore your requirements — we know how to fit it
+              seamlessly into a business ecosystem.
+            </p>
+            <Link to="/contact" className="chat_btn btn_hover">
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Fragment>
+  );
 }
 
-export default serviceSingle
+export default serviceSingle;

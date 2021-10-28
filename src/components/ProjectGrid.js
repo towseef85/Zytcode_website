@@ -1,37 +1,11 @@
 import React from 'react'
 import ProjectGridItem from '../components/ProjectGridItem'
 import ProjectRightSidebar from './ProjectRightSidebar'
+import {PROJECTS} from '../data/projects'
+import { Link } from 'react-router-dom'
+import { SERVICES } from '../data/services'
 
-const ServiceData=[
-    {
-        id: '01',
-        image: 'blog-grid/post_1.jpg',
-        ptitle: 'Proin gravi nibh velit auctor aliquet aenean.',
-        admin: 'Admin',
-        date: 'March 1, 2019'
-    },
-    {
-        id: '02',
-        image: 'blog-grid/post_2.jpg',
-        ptitle: 'Proin gravi nibh velit auctor aliquet aenean.',
-        admin: 'Admin',
-        date: 'March 10, 2019'
-    },
-    {
-        id: '03',
-        image: 'blog-grid/post_3.jpg',
-        ptitle: 'Proin gravi nibh velit auctor aliquet aenean.',
-        admin: 'Admin',
-        date: 'jan 10, 2019'
-    },
-    {
-        id: '04',
-        image: 'blog-grid/post_4.jpg',
-        ptitle: 'Proin gravi nibh velit auctor aliquet aenean.',
-        admin: 'Admin',
-        date: 'March 1, 2019'
-    }
-]
+
 
 function ProjectGrid() {
     return (
@@ -40,22 +14,29 @@ function ProjectGrid() {
             <div className="row">
                 <div className="col-lg-8 blog_grid_info">
                     <div className="row">
-                        <ProjectGridItem date="14" month="jan" image="blog_grid_1.jpg" Title="Why I say old chap that is." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="3"/>
-                        <ProjectGridItem date="15" month="Apr" image="blog_grid_2.jpg" Title="Oxford bum bag gutted." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="2"/>
-                        <ProjectGridItem date="10" month="jan" image="blog_grid_3.jpg" Title="Kell at public school chee." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="3"/>
-                        <ProjectGridItem date="7" month="Apr" image="blog_grid_4.jpg" Title="Oxford bum bag gutted." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="2"/>
-                        <ProjectGridItem date="14" month="jan" image="blog_grid_5.jpg" Title="Why I say old chap that is." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="3"/>
-                        <ProjectGridItem date="15" month="Apr" image="blog_grid_6.jpg" Title="Oxford bum bag gutted." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="2"/>
-                        <ProjectGridItem date="10" month="jan" image="blog_grid_7.jpg" Title="Kell at public school chee." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="3"/>
-                        <ProjectGridItem date="7" month="Apr" image="blog_grid_8.jpg" Title="Oxford bum bag gutted." description="Only a quid bobby brilliant bugger Jeffrey owt to do with me lurgy blimey.!"
-                        btn="Read More" comment="2"/>
+                        {PROJECTS.map((project,index) => (
+
+                       
+                        <div className="col-lg-6">
+        <div className="blog_list_item blog_list_item_two" key={project.id}>
+            {/* <Link to={`/projectsingle/${project.id}`} className="post_date">
+                <h2>{date} <span>{month}</span></h2>
+            </Link> */}
+            <a href="blog-single.html"><img className="img-fluid" src={require ("../img/new-home/project/" + project.img_banner)}alt=""/></a>
+            <div className="blog_content">
+            <Link to={`/projectsingle/${project.id}`}>
+                    <h5 className="blog_title">{project.title}</h5>
+                </Link>
+                <p>{project.description.length > 160 ? project.description.slice(0,160) + "..." : project.description}</p>
+                <div className="post-info-bottom">
+                    <Link to={`/projectsingle/${project.id}`} className="learn_btn_two">Know more <i className="arrow_right"></i></Link>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+                        ))}
+                        
                     </div>
                     <ul className="list-unstyled page-numbers shop_page_number text-left mt_30">
                         <li><span aria-current="page" className="page-numbers current">1</span></li>
@@ -64,7 +45,7 @@ function ProjectGrid() {
                     </ul>
                 </div>
                 <div className="col-lg-4">
-                    <ProjectRightSidebar ServiceData={ServiceData}/>
+                    <ProjectRightSidebar ServiceData={SERVICES}/>
                 </div>
             </div>
         </div>

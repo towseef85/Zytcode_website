@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import Routes from './Routes'
+import { withRouter } from 'react-router';
+import { createBrowserHistory } from 'history'
 import "./assets/themify-icon/themify-icons.css";
 import "./assets/simple-line-icon/simple-line-icons.css";
 import "./assets/font-awesome/css/all.css";
@@ -17,13 +18,16 @@ import "popper.js";
 
 
 const loader = document.querySelector("#preloader");
+export const history = createBrowserHistory();
 const showLoader = () => loader.classList.remove("loader--hide");
 
 const hideLoader = () => loader.classList.add("loader--hide");
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes hideLoader={hideLoader} showLoader={showLoader} />
+    <withRouter>
+    <Routes hideLoader={hideLoader} showLoader={showLoader} history={history}/>
+    </withRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,7 @@
 import React from 'react'
-import HRServiceItems from './HRServiceItems';
+import { SERVICES } from '../data/services';
+import Reveal from 'react-reveal/Reveal';
+import { Link } from 'react-router-dom';
 
 const Service= [
     {
@@ -53,6 +55,7 @@ const Service= [
 ]
 
 function HRService() {
+    const leng=5
     return (
         <section className="prototype_service_info">
                 <div className="symbols-pulse active">
@@ -62,18 +65,36 @@ function HRService() {
                     <div className="pulse-4"></div>
                     <div className="pulse-x"></div>
                 </div>
+                <section className="agency_service_area bg_color">
                 <div className="container">
-                    <h2 className="f_size_30 f_600 t_color3 l_height45 text-center mb_90">SaasLand is built for designers like you.<br/> With useful features, an intuitive interface.</h2>
-                    <div className="row p_service_info">
-                            {
-                                Service.map(item => {
+                    <h2 className="f_size_30 f_600 t_color3 l_height40 text-center mb_90 wow fadeInUp" data-wow-delay="0.2s">Drive continuous improvement by transferring digital skills along with ideas from a cross-section of industries and innovation ecosystems.</h2>
+                    <div className="row mb_30">
+                    {
+                                SERVICES.map((item,index) => {
                                     return(
-                                        <HRServiceItems HRtitle={item.HRtitles} HRdescription={item.HRdescription}  Hicon={item.Hicon} rclass={item.rclass} iclass={item.iclass} key={item.id}/>
-                                    )
-                                })
-                            }
+                        <div className="col-lg-4 col-sm-6">
+                       
+                                        <Reveal effect="fadeInUp" duration={1100}>
+                                            <div className={`p_service_item agency_service_item pr_70 wow fadeInUp`}>
+                                                    <div className="icon">
+                                                        
+                                                        <img src={require (`../img/home4/icon_shape${item.id > 4 ? item.id-2 : item.id}.png`)} alt=""/>
+                                                        <i className={item.icon}></i>
+                                                    </div>
+                                                    <h5 className="f_600 f_p t_color3">{item.title}</h5>
+                                                    <p>{item.description.length > 160 ? item.description.slice(0,160)+"...": item.description}</p>
+                                                    <p className="mb-0"><Link to={`/serviceSingle/${item.id}`}>Know more</Link><i className="arrow_right"></i></p>
+                                                </div>
+                                        </Reveal>
+                                
                     </div>
+                        )
+                    })
+                }
+                    </div>
+                
                 </div>
+            </section>
             </section>
     )
 }

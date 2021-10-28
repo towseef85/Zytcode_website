@@ -6,8 +6,8 @@ function CoreFeatures() {
       <div className="container">
         <div className="hosting_title chat_title text-center">
           <h2 className="wow fadeInUp" data-wow-delay="0.2s">
-            Core Features
-            <br /> That makes us <span>top notch</span>
+          Understand how to digitize   
+            <br />your core to become a <span>truly digital enterprise</span>
           </h2>
         </div>
         <div className="row">
@@ -17,17 +17,16 @@ function CoreFeatures() {
                 <div className="round_circle"></div>
                 <img
                   className="top_img p_absoulte"
-                  src={require("../img/home-chat/pluse.png")}
+                  src={require("../img/new-home/pluse.png")}
                   alt=""
                 />
-                <img src={require("../img/home-chat/chat.png")} alt="" />
+                <img src={require("../img/new-home/chat.png")} alt="" />
               </div>
               <a href=".#">
-                <h4>Simlify communications</h4>
+                <h4>Whats New</h4>
               </a>
               <p>
-                Tidio lets you get all your live chat, e-mail, and Messenger
-                communication in one panel.
+              Making customers future ready by accelerating their movement towards a smarter world
               </p>
             </div>
           </div>
@@ -37,17 +36,16 @@ function CoreFeatures() {
                 <div className="round_circle two"></div>
                 <img
                   className="top_img p_absoulte"
-                  src={require("../img/home-chat/triangle.png")}
+                  src={require("../img/new-home/triangle.png")}
                   alt=""
                 />
-                <img src={require('../img/home-chat/mobile.png')} alt="" />
+                <img src={require('../img/new-home/mobile.png')} alt="" />
               </div>
               <a href=".#">
-                <h4>Quick Responce</h4>
+                <h4>Insights</h4>
               </a>
               <p>
-                Tidio lets you get all your live chat, e-mail, and Messenger
-                communication in one panel.
+              Driving transformational outcomes through API, microservices and integration
               </p>
             </div>
           </div>
@@ -57,17 +55,16 @@ function CoreFeatures() {
                 <div className="round_circle three"></div>
                 <img
                   className="top_img p_absoulte"
-                  src={require("../img/home-chat/box.png")}
+                  src={require("../img/new-home/box.png")}
                   alt=""
                 />
-                <img src={require('../img/home-chat/book.png')} alt="" />
+                <img src={require('../img/new-home/book.png')} alt="" />
               </div>
               <a href=".#">
-                <h4>Easy Report</h4>
+                <h4>Our Offerings</h4>
               </a>
               <p>
-                Tidio lets you get all your live chat, e-mail, and Messenger
-                communication in one panel.
+              Creating digital differentiation with a modernized core, hyper-connected ecosystems and extreme agility
               </p>
             </div>
           </div>
